@@ -9,8 +9,8 @@ url_base = 'https://www.coffeereview.com/review/page/'
 headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36'}
 
 # Getting the index pages
-start = 250
-stop = 300
+start = 401
+stop = 451
 for j in range(start, stop):
     index_pages = []
     links = []
@@ -76,5 +76,5 @@ for j in range(start, stop):
                 pre_df[attr].append(np.nan)
 
     df = pd.DataFrame(pre_df)
-    df.to_csv(f"data/df{j}.csv")
+    df.to_csv(f"raw_data/df{j}.csv")
 
